@@ -87,7 +87,7 @@ export default class Siema {
    */
   attachEvents() {
     // Resize element on window resize
-    window.addEventListener('resize', this.resizeHandler);
+    window.addEventListener('resize', this.resizeHandler, { passive: true });
 
     // If element is draggable / swipable, add event handlers
     if (this.config.draggable) {
@@ -102,9 +102,9 @@ export default class Siema {
       };
 
       // Touch events
-      this.selector.addEventListener('touchstart', this.touchstartHandler);
+      this.selector.addEventListener('touchstart', this.touchstartHandler, { passive: true });
       this.selector.addEventListener('touchend', this.touchendHandler);
-      this.selector.addEventListener('touchmove', this.touchmoveHandler);
+      this.selector.addEventListener('touchmove', this.touchmoveHandler, { passive: true });
 
       // Mouse events
       this.selector.addEventListener('mousedown', this.mousedownHandler);
