@@ -533,9 +533,7 @@ export default class Siema {
       // if dragged element is a link
       // mark preventClick prop as a true
       // to detemine about browser redirection later on
-      if (e.target.nodeName === 'A') {
-        this.drag.preventClick = true;
-      }
+      this.drag.preventClick = true;
 
       this.drag.endX = e.pageX;
       this.selector.style.cursor = '-webkit-grabbing';

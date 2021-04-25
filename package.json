@@ -17,6 +17,10 @@
     "build": "webpack && cp dist/siema.min.js docs/assets",
     "dev": "webpack --progress --colors --watch"
   },
+
+    "resolutions": {
+      "**/**/node-gyp": "^3.8.0"
+    },
   "files": [
     "dist"
   ],
